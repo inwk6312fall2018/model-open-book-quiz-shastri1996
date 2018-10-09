@@ -1,5 +1,5 @@
 import random
-import pyCardDeck
+import pyCardDeck as myDeck
 from pyCardDeck.cards import PokerCard
 cards=[]
 
@@ -13,7 +13,10 @@ def Deck_initial_stage():
 			cards.append((shape,j))
 			#cards.append(i)
 			#cards.append(j)
-	print(cards)
-Deck_initial_stage()
+	return(cards)
+deck=myDeck.Deck(Deck_initial_stage())
 
 
+for i in range(5):
+	player_1.append(deck.draw())
+print(player_1)
